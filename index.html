@@ -1,285 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Tiwari - Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Custom Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .animate-slideInLeft {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-        .hover-scale {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        .section-header {
-            transition: color 0.3s ease;
-        }
-        .section-header:hover {
-            color: #1d4ed8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam Tiwari - Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* 1.  All colors extracted from the image */
+    :root {
+      --bg-main: #111111;
+      --bg-card: #1E1E1E;
+      --accent: #FF9500;
+      --secondary: #30D158;
+      --border: #333333;
+      --text-primary: #FFFFFF;
+      --text-muted: #8E8E93;
+      --hover: #FF9500;
+    }
+
+    /* 2.  Global overrides */
+    body {
+      background: var(--bg-main);
+      color: var(--text-primary);
+      font-family: system-ui, sans-serif;
+    }
+
+    /* 3.  Custom animations (unchanged) */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .animate-fadeInUp   { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-slideInLeft { animation: slideInLeft 0.8s ease-out forwards; }
+
+    /* 4.  Hover & scale (unchanged) */
+    .hover-scale {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 5.  Section header accent */
+    .section-header {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+    .section-header:hover {
+      color: var(--hover);
+    }
+
+    /* 6.  Scroll-to-top button */
+    .scroll-top {
+      background: var(--accent);
+    }
+    .scroll-top:hover {
+      background: #E68900;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-    <div class="container mx-auto px-4 py-8 max-w-5xl">
-        <!-- Header Section -->
-        <header class="text-center mb-12 animate-fadeInUp">
-            <h1 class="text-4xl md:text-5xl font-bold mb-2">Shivam Tiwari</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-4">
-                Senior Business Development Executive | Team Leadership | Customer Acquisition
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-                <a href="tiwari.shivamlko1996@gmail.com" class="flex items-center hover:text-blue-600 transition-colors">
-                    <i class="fas fa-envelope mr-2"></i> tiwari.shivamlko1996@gmail.com
-                </a>
-                <a href="+919721893999" class="flex items-center hover:text-blue-600 transition-colors">
-                    <i class="fas fa-phone mr-2"></i> +91 9721893999
-                </a>
-                <span class="flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2"></i> Lucknow, Uttar Pradesh, India
-                </span>
-            </div>
-        </header>
+<body class="font-sans">
+  <div class="container mx-auto px-4 py-8 max-w-5xl">
 
-        <!-- Navigation -->
-        <nav class="sticky top-0 bg-white shadow-md py-4 mb-8 z-10 animate-fadeInUp">
-            <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium">
-                <li><a href="#summary" class="hover:text-blue-600 transition-colors">Summary</a></li>
-                <li><a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a></li>
-                <li><a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a></li>
-                <li><a href="#achievements" class="hover:text-blue-600 transition-colors">Achievements</a></li>
-                <li><a href="#education" class="hover:text-blue-600 transition-colors">Education</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="text-center mb-6 animate-fadeInUp">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Shivam Tiwari</h1>
+      <p class="text-lg md:text-xl text-[#8E8E93] mb-4">
+        Senior Business Development Executive | Team Leadership | Customer Acquisition
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+        <a href="mailto:Shivam.tiwari_tel@external.swiggy.in" class="flex items-center text-[#FF9500] hover:text-[#E68900] transition-colors">
+          <i class="fas fa-envelope mr-2"></i>Shivam.tiwari_tel@external.swiggy.in
+        </a>
+        <a href="tel:+919721893999" class="flex items-center text-[#FF9500] hover:text-[#E68900] transition-colors">
+          <i class="fas fa-phone mr-2"></i> +91 9721893999
+        </a>
+        <span class="flex items-center text-[#8E8E93]">
+          <i class="fas fa-map-marker-alt mr-2"></i> Lucknow, Uttar Pradesh, India
+        </span>
+      </div>
 
-        <!-- Professional Summary -->
-        <section id="summary" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Professional Summary</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                <p class="text-gray-700 leading-relaxed">
-                    Results-oriented Business Development Executive with 8+ years of progressive experience across India's leading tech companies. My journey spans from telecom sales to fintech partnerships and food-tech merchant relations. I thrive on building meaningful business relationships and have consistently delivered revenue growth through strategic thinking and customer-centric approach. Currently driving merchant success at Swiggy while expanding partnership opportunities in the competitive food delivery landscape.
-                </p>
-            </div>
-        </section>
+      <!-- ====== NEW: PROFILE PICTURE ====== -->
+      <div class="mt-6 flex justify-center">
+        <img 
+          src="gokuu.png" 
+          alt="Shivam Tiwari"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-[#FF9500] shadow-lg"
+        >
+      </div>
 
-        <!-- Professional Experience -->
-        <section id="experience" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Professional Experience</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Senior Onboarding Executive</h3>
-                    <p class="text-gray-600">Swiggy | 2023 - Present</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Successfully lead merchant acquisition initiatives, bringing 150+ restaurant partners onboard monthly</li>
-                        <li>Transform complex onboarding processes into streamlined experiences, reducing partner activation time by 30%</li>
-                        <li>Consistently exceed quarterly revenue targets through strategic relationship building with high-value merchants</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Onboarding Executive</h3>
-                    <p class="text-gray-600">Swiggy | 2022 - 2023</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Managed merchant onboarding pipeline for India's leading food delivery platform</li>
-                        <li>Built strong relationships with restaurant owners, addressing their operational needs and concerns</li>
-                        <li>Achieved 95% partner satisfaction rate through personalized support and timely issue resolution</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Business Development Executive</h3>
-                    <p class="text-gray-600">PhonePe | 2019 - 2022</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Spearheaded business development initiatives for digital payment ecosystem, focusing on merchant acquisition</li>
-                        <li>Developed lasting partnerships with 200+ local businesses, helping them transition to digital payments</li>
-                        <li>Consistently surpassed monthly targets by 15-20% through relationship-focused sales methodology</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Business Development Executive</h3>
-                    <p class="text-gray-600">Paytm | 2017 - 2019</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Pioneered customer acquisition strategies for emerging fintech solutions in North India region</li>
-                        <li>Nurtured client relationships that resulted in 85% retention rate and increased transaction volumes</li>
-                        <li>Generated substantial revenue growth through innovative lead generation techniques and personalized pitches</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Team Leader</h3>
-                    <p class="text-gray-600">Airtel BPO | 2015 - 2017</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Guided a dynamic team of 12 sales representatives, fostering collaborative environment for telecom service sales</li>
-                        <li>Implemented innovative performance strategies that increased team productivity by 25% within first year</li>
-                        <li>Conducted weekly training workshops, sharing industry insights and refining sales techniques</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Sales Executive</h3>
-                    <p class="text-gray-600">Airtel BPO | 2014 - 2015</p>
-                    <ul class="list-disc ml-5 mt-2 text-gray-700">
-                        <li>Initiated career in telecommunications, focusing on data pack sales and customer service excellence</li>
-                        <li>Consistently achieved monthly quotas while building strong foundation in consultative selling approach</li>
-                        <li>Gained comprehensive product knowledge across telecom offerings, becoming go-to resource for colleagues</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+      <!-- ====== NEW: DOWNLOAD CV BUTTON ====== -->
+      <a 
+        href="Shivam_Tiwari_CV.pdf" 
+        download
+        class="inline-block mt-6 bg-[#FF9500] hover:bg-[#E68900] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-colors"
+      >
+        <i class="fas fa-download mr-2"></i>Download CV
+      </a>
+    </header>
 
-        <!-- Core Competencies -->
-        <section id="skills" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Core Competencies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold mb-2">Business Development</h3>
-                    <ul class="list-disc ml-5 text-gray-700">
-                        <li>Business Development</li>
-                        <li>Sales Management</li>
-                        <li>Revenue Generation</li>
-                        <li>Strategic Planning</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold mb-2">Leadership & Management</h3>
-                    <ul class="list-disc ml-5 text-gray-700">
-                        <li>Team Leadership</li>
-                        <li>Performance Optimization</li>
-                        <li>Cross-functional Collaboration</li>
-                        <li>Stakeholder Management</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold mb-2">Customer Relations</h3>
-                    <ul class="list-disc ml-5 text-gray-700">
-                        <li>Customer Acquisition</li>
-                        <li>Relationship Management</li>
-                        <li>Merchant Onboarding</li>
-                        <li>Market Analysis</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
-                    <ul class="list-disc ml-5 text-gray-700">
-                        <li>Microsoft Office Suite</li>
-                        <li>CRM Systems</li>
-                        <li>Google Workspace</li>
-                        <li>Data Analysis</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-[#1E1E1E] border-b border-[#333333] py-4 mb-8 z-10 animate-fadeInUp">
+      <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium">
+        <li><a href="#summary" class="text-[#FFFFFF] hover:text-[#FF9500] transition-colors">Summary</a></li>
+        <li><a href="#experience" class="text-[#FFFFFF] hover:text-[#FF9500] transition-colors">Experience</a></li>
+        <li><a href="#skills" class="text-[#FFFFFF] hover:text-[#FF9500] transition-colors">Skills</a></li>
+        <li><a href="#achievements" class="text-[#FFFFFF] hover:text-[#FF9500] transition-colors">Achievements</a></li>
+        <li><a href="#education" class="text-[#FFFFFF] hover:text-[#FF9500] transition-colors">Education</a></li>
+      </ul>
+    </nav>
 
-        <!-- Key Achievements -->
-        <section id="achievements" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Key Achievements</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-trophy text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">8+ Years Experience</h3>
-                        <p class="text-gray-700">Progressive experience in business development and sales across leading tech companies</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-users text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">Team Leadership</h3>
-                        <p class="text-gray-700">Successfully managed cross-functional teams and increased productivity by 25%</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-chart-line text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">Revenue Growth</h3>
-                        <p class="text-gray-700">Consistently exceeded targets by 15-20% across Fintech, Food Tech, and Telecom industries</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-bullseye text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">Customer Acquisition</h3>
-                        <p class="text-gray-700">Specialist with proven track record of acquiring 200+ business partnerships</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-star text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">Performance Excellence</h3>
-                        <p class="text-gray-700">Achieved 95% partner satisfaction rate and 85% client retention rate</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale flex items-start">
-                    <i class="fas fa-rocket text-2xl text-yellow-500 mr-4"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold">Process Optimization</h3>
-                        <p class="text-gray-700">Reduced partner activation time by 30% through streamlined onboarding processes</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Professional Summary -->
+    <section id="summary" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Professional Summary</h2>
+      <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+        <p class="text-[#FFFFFF] leading-relaxed">
+          Results-oriented Business Development Executive with 8+ years of progressive experience across India's leading tech companies. My journey spans from telecom sales to fintech partnerships and food-tech merchant relations. I thrive on building meaningful business relationships and have consistently delivered revenue growth through strategic thinking and customer-centric approach. Currently driving merchant success at Swiggy while expanding partnership opportunities in the competitive food delivery landscape.
+        </p>
+      </div>
+    </section>
 
-        <!-- Education -->
-        <section id="education" class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Education</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Bachelor of Commerce (B.Com)</h3>
-                    <p class="text-gray-600">RMLAU Faizabad | 2025</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">Higher Secondary Certificate</h3>
-                    <p class="text-gray-600">UP Board | 2014</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
-                    <h3 class="text-xl font-semibold">High School Certificate</h3>
-                    <p class="text-gray-600">UP Board | 2012</p>
-                </div>
-            </div>
-        </section>
-    </div>
+    <!-- Professional Experience -->
+    <section id="experience" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Professional Experience</h2>
+      <div class="space-y-6">
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Senior Onboarding Executive</h3>
+          <p class="text-[#8E8E93]">Swiggy | 2023 - Present</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Successfully lead merchant acquisition initiatives, bringing 150+ restaurant partners onboard monthly</li>
+            <li>Transform complex onboarding processes into streamlined experiences, reducing partner activation time by 30%</li>
+            <li>Consistently exceed quarterly revenue targets through strategic relationship building with high-value merchants</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Onboarding Executive</h3>
+          <p class="text-[#8E8E93]">Swiggy | 2022 - 2023</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Managed merchant onboarding pipeline for India's leading food delivery platform</li>
+            <li>Built strong relationships with restaurant owners, addressing their operational needs and concerns</li>
+            <li>Achieved 95% partner satisfaction rate through personalized support and timely issue resolution</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Business Development Executive</h3>
+          <p class="text-[#8E8E93]">PhonePe | 2019 - 2022</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Spearheaded business development initiatives for digital payment ecosystem, focusing on merchant acquisition</li>
+            <li>Developed lasting partnerships with 200+ local businesses, helping them transition to digital payments</li>
+            <li>Consistently surpassed monthly targets by 15-20% through relationship-focused sales methodology</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Business Development Executive</h3>
+          <p class="text-[#8E8E93]">Paytm | 2017 - 2019</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Pioneered customer acquisition strategies for emerging fintech solutions in North India region</li>
+            <li>Nurtured client relationships that resulted in 85% retention rate and increased transaction volumes</li>
+            <li>Generated substantial revenue growth through innovative lead generation techniques and personalized pitches</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Team Leader</h3>
+          <p class="text-[#8E8E93]">Airtel BPO | 2015 - 2017</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Guided a dynamic team of 12 sales representatives, fostering collaborative environment for telecom service sales</li>
+            <li>Implemented innovative performance strategies that increased team productivity by 25% within first year</li>
+            <li>Conducted weekly training workshops, sharing industry insights and refining sales techniques</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Sales Executive</h3>
+          <p class="text-[#8E8E93]">Airtel BPO | 2014 - 2015</p>
+          <ul class="list-disc ml-5 mt-2 text-[#FFFFFF]">
+            <li>Initiated career in telecommunications, focusing on data pack sales and customer service excellence</li>
+            <li>Consistently achieved monthly quotas while building strong foundation in consultative selling approach</li>
+            <li>Gained comprehensive product knowledge across telecom offerings, becoming go-to resource for colleagues</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Core Competencies -->
+    <section id="skills" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Core Competencies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#FF9500] mb-2">Business Development</h3>
+          <ul class="list-disc ml-5 text-[#FFFFFF]">
+            <li>Business Development</li><li>Sales Management</li><li>Revenue Generation</li><li>Strategic Planning</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#FF9500] mb-2">Leadership & Management</h3>
+          <ul class="list-disc ml-5 text-[#FFFFFF]">
+            <li>Team Leadership</li><li>Performance Optimization</li><li>Cross-functional Collaboration</li><li>Stakeholder Management</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#FF9500] mb-2">Customer Relations</h3>
+          <ul class="list-disc ml-5 text-[#FFFFFF]">
+            <li>Customer Acquisition</li><li>Relationship Management</li><li>Merchant Onboarding</li><li>Market Analysis</li>
+          </ul>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#FF9500] mb-2">Technical Skills</h3>
+          <ul class="list-disc ml-5 text-[#FFFFFF]">
+            <li>Microsoft Office Suite</li><li>CRM Systems</li><li>Google Workspace</li><li>Data Analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+    <!-- Key Achievements -->
+    <section id="achievements" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Key Achievements</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-trophy text-2xl text-[#FF9500] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">8+ Years Experience</h3>
+            <p class="text-[#8E8E93]">Progressive experience in business development and sales across leading tech companies</p>
+          </div>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-users text-2xl text-[#30D158] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">Team Leadership</h3>
+            <p class="text-[#8E8E93]">Successfully managed cross-functional teams and increased productivity by 25%</p>
+          </div>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-chart-line text-2xl text-[#30D158] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">Revenue Growth</h3>
+            <p class="text-[#8E8E93]">Consistently exceeded targets by 15-20% across Fintech, Food Tech, and Telecom industries</p>
+          </div>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-bullseye text-2xl text-[#FF9500] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">Customer Acquisition</h3>
+            <p class="text-[#8E8E93]">Specialist with proven track record of acquiring 200+ business partnerships</p>
+          </div>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-star text-2xl text-[#30D158] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">Performance Excellence</h3>
+            <p class="text-[#8E8E93]">Achieved 95% partner satisfaction rate and 85% client retention rate</p>
+          </div>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale flex items-start">
+          <i class="fas fa-rocket text-2xl text-[#FF9500] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#FFFFFF]">Process Optimization</h3>
+            <p class="text-[#8E8E93]">Reduced partner activation time by 30% through streamlined onboarding processes</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        // Trigger animations on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeInUp');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
+    <!-- Education -->
+    <section id="education" class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 section-header animate-slideInLeft">Education</h2>
+      <div class="space-y-6">
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Bachelor of Commerce (B.Com)</h3>
+          <p class="text-[#8E8E93]">RMLAU Faizabad | 2025</p>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">Higher Secondary Certificate</h3>
+          <p class="text-[#8E8E93]">UP Board | 2014</p>
+        </div>
+        <div class="bg-[#1E1E1E] border border-[#333333] p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold text-[#30D158]">High School Certificate</h3>
+          <p class="text-[#8E8E93]">UP Board | 2012</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        document.querySelectorAll('.animate-fadeInUp, .animate-slideInLeft').forEach(element => {
-            observer.observe(element);
-        });
-    </script>
+  <!-- Scroll-to-Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-4 right-4 scroll-top text-white p-3 rounded-full shadow-lg transition-colors">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Trigger animations on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-fadeInUp, .animate-slideInLeft').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
